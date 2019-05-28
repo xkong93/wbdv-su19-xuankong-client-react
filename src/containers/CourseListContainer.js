@@ -5,6 +5,8 @@ import CourseService from '../services/CourseService'
 export default class CourseListContainer extends React.Component {
     constructor(props) {
         super(props)
+        
+        //new an obj 
         this.courseService = CourseService.getInstance()
         this.state = {
             courses: this.courseService.findAllCourses()
