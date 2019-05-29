@@ -1,5 +1,5 @@
 import React from 'react'
-
+import LessonTabsComponent from '../components/LessonTabsComponent'
 export default class LessonTabsContainer
     extends React.Component {
     constructor(props) {
@@ -8,16 +8,13 @@ export default class LessonTabsContainer
             lessons: props.lessons
         }
     }
-    componentDidUpdate(newProps, oldProps) {
-        console.log(newProps, oldProps)
-    }
+    // componentDidUpdate(newProps, oldProps) {
+    //     console.log(newProps, oldProps)
+    // }
     render() {
         return(
             <div>
-                <h1>Lesson Tab</h1>
-                <div className="list-group">
-
-                </div>
+                <LessonTabsComponent lessons={this.state.lessons}/>
             </div>
         )
     }

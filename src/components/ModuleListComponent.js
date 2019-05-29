@@ -36,8 +36,12 @@ export default class ModuleListComponent extends React.Component {
   }
     
     deleteModule = (id) => {
-        console.log(id)
+        this.setState({
+            modules:this.state.modules.filter(module => module.id != id)
+        })
     }
+
+    //to do edit module 
 
   render() {
     return (
