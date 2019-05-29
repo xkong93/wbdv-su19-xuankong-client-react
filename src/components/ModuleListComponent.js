@@ -14,14 +14,6 @@ export default class ModuleListComponent extends React.Component {
   }
 
   createModule = () => {
-    // var newId = new Date().getTime();
-    // this.setState({
-    //   module: {
-    //     id: newId,
-    //     courseId: this.state.module.courseId,
-    //     title: this.state.module.title
-    //   }
-    // });
     //since this.props.modules is an array of objs, we use = instead of { this.props.modules :[this.state.module, ...this.props.modules] }
     // this.props is immutable so we need to set local state of props by giving it to modules
     this.setState(
