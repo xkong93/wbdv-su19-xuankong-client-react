@@ -34,7 +34,10 @@ export default class ModuleListComponent extends React.Component {
       }
     });
   }
-
+    
+    deleteModule = (id) => {
+        console.log(id)
+    }
 
   render() {
     return (
@@ -48,14 +51,12 @@ export default class ModuleListComponent extends React.Component {
             />
             <button
               onClick={this.createModule}
-              className="btn btn-primary btn-block "
-            >
-              
+              className="btn btn-primary btn-block ">              
               Add Module
             </button>
           </li>
           {this.state.modules.map(module => (
-            <ModuleItem module={module} key={module.id} />
+            <ModuleItem deleteModule={this.deleteModule}  module={module} key={module.id} />
           ))}
         </ul>
       </div>

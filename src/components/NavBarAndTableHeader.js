@@ -37,7 +37,7 @@ const NavBarAndTableHead = (props) => (
             <div className="d-none d-sm-block col-2 text-right">Owned by</div>
             <div className="d-none d-sm-block col-3 text-right">Last modified by me</div>
             <div className="d-xs-block col-xs-2 col-sm-2 text-right">
-               <button onClick={() => props.changeView()} id="changeToCardsView"><i className="fa fa-th"></i></button>
+               <button onClick={()=>props.changeView()} id="changeToCardsView"><i className="fa fa-th"></i></button>
               <span><i className="fa fa-sort" /></span>
             </div>
           </div>
