@@ -50,7 +50,7 @@ export default class ModuleListComponent extends React.Component {
           <li className="list-group-item">
             <input
               onChange={this.titleChange}
-              value={this.state.module.titile}
+              value={this.state.module.title}
               className="form-control"
             />
             <button
