@@ -3,6 +3,7 @@ import CourseEditorComponent from '../components/CourseEditorComponent'
 import CourseService from '../services/CourseService'
 import ModuleService from '../services/ModuleService'
 import LessonService from '../services/LessonService'
+import CourseEditorNavBar from '../components/CourseEditorNavBar';
 
 export default class CourseEditorContainer
     extends React.Component {
@@ -25,10 +26,13 @@ export default class CourseEditorContainer
     }
     render() {
         return(
+            <div className="container" >
+            <CourseEditorNavBar title={this.state.course.title}/>
             <CourseEditorComponent
                 course={this.state.course}
                 modules={this.state.modules}
                 lessons={this.state.lessons}/>
+            </div>
         )
     }
 }

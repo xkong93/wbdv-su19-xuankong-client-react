@@ -1,6 +1,6 @@
 import React from "react";
-import './styles/NavBarAndTopHead.css'
-const NavBarAndTableHead = () => (
+import './styles/NavBarAndTopHeader.style.client.css'
+const NavBarAndTableHead = (props) => (
   <div>
     <nav className="navbar  navbar-light bg-primary ">
       <button
@@ -33,12 +33,11 @@ const NavBarAndTableHead = () => (
       <div id="header" className="row shadow p-3 mb-2 bg-white rounded">
         <div className="container">
           <div className="row">
-            {/* <div className="col-2" /> */}
             <div className="col-5">Title</div>
-            <div className="d-none d-sm-block col-2 text-center">Owned by</div>
-            <div className="d-none d-sm-block col-2">Last modified by me</div>
-            <div className="d-none d-sm-block col-3 text-center">
-               <span id="changeToCardsView"><i className="fa fa-th"></i></span>
+            <div className="d-none d-sm-block col-2 text-right">Owned by</div>
+            <div className="d-none d-sm-block col-3 text-right">Last modified by me</div>
+            <div className="d-xs-block col-xs-2 col-sm-2 text-right">
+               <button onClick={() => props.changeView()} id="changeToCardsView"><i className="fa fa-th"></i></button>
               <span><i className="fa fa-sort" /></span>
             </div>
           </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import CourseListContainer from "../containers/CourseListContainer";
-// import CourseEditorComponent from '../'
+import CourseEditorComponent from '../components/CourseEditorComponent'
 import CourseCard from './CourseCard'
 // npm install react-router-dom --save
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
