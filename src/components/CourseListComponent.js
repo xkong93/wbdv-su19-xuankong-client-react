@@ -1,23 +1,17 @@
 import React from 'react'
-// import NavBar from './NavBar'
-
+import CourseRow from './CourseRow'
 //take array of coursese
 const CourseListComponent = ({courses}) =>
     
 // return following thing but no need to add return (). single element 
-    <div>
-        <h2>Course List {courses.length}</h2>
-        <div className="list-group">
+    <div className="container">
+        {/* <h2>Course List {courses.length}</h2> */}
             {
                 courses.map(course =>
-                    <a href={`/courses/${course.id}/modules/1/lessons/1/topics/1`}
-                       key={course.id}
-                       className="list-group-item">
-                        {course.title}
-                    </a>
-                )
+                    <CourseRow key ={course.id} course={course}/>
+                 )
             }
-        </div>
+            
     </div>
 
 export default CourseListComponent

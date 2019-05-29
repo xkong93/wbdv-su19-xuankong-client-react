@@ -9,9 +9,13 @@ const ModuleListComponent = ({course, modules}) =>
                    href={`/courses/${course.id}/modules/${module.id}/lessons/1/topics/1`}
                    className="list-group-item">
                     {module.title}
+                     <i className="fa fa-trash"></i>
+
                 </a>
             )
         }
+
+        
     </div>
 </div>
 

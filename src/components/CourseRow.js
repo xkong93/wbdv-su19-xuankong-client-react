@@ -1,9 +1,17 @@
 import React from "react";
 
-export default (CourseRow = ({ title }) => {
+const CourseRow = ({course}) => {
+
   return (
-    <tr>
-      <td>{title}</td>
-    </tr>
+    <div className="row border justify-content-between">
+      <div className="col-6">{course.title}</div>
+      <div className="d-none d-sm-block col-2 text-center">{course.onwer}</div>
+      <div className="d-none d-sm-block col-2 text-center">
+        {course.ModifiedDate}
+      </div>
+      <div className="col-2 text-right">X</div>
+    </div>
   );
-});
+};
+
+export default CourseRow;

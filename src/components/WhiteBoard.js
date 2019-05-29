@@ -5,7 +5,6 @@ import CourseCard from './CourseCard'
 // npm install react-router-dom --save
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import CourseEditorContainer from "../containers/CourseEditorContainer";
-import NavBar from './NavBar'
 
 class WhiteBoard extends React.Component {
   render() {
@@ -13,10 +12,9 @@ class WhiteBoard extends React.Component {
       <Router>
 
         <div>
-          <h1>WhiteBoard</h1>
-                  {/* <NavBar/> */}
+          {/* <h1>WhiteBoard</h1> */}
 
-                    <a href="/courses">Courses</a>
+                    {/* <a href="/courses">Courses</a> */}
 
           <Route exact={true} path="/courses" component={CourseListContainer} />
 
