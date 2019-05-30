@@ -37,6 +37,7 @@ export default class LessonTabsComponent extends React.Component {
         })
     }
   render() {
+    console.log(this.props.params.lessonId)
     return (
       <div>
         <ul class="nav nav-tabs">

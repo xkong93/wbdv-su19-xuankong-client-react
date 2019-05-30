@@ -16,7 +16,9 @@ const CourseEditorComponent = ({course, modules, lessons,topics,params}) =>
             <LessonTabsContainer
                 course={course}
                 lessons={lessons}
-                topics={topics}/>
+                topics={topics}
+                params={params}
+                />
                         <WidigetList/>
 
         </div>

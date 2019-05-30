@@ -15,11 +15,10 @@ export default class LessonTabsContainer
     // }
     
     render() {
-        console.log(this.state.topics);
         return(
             <div>
-                <LessonTabsComponent lessons={this.state.lessons}/>
-                <TopicPillsComponent topics={this.state.topics}/>
+                <LessonTabsComponent lessons={this.state.lessons} params={this.props.params}/>
+                <TopicPillsComponent topics={this.state.topics} params={this.props.params}/>
             </div>
         )
     }
