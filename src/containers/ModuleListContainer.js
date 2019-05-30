@@ -7,13 +7,16 @@ export default class ModuleListContainer extends React.Component {
         this.state = {
             course: this.props.course,
             modules : this.props.modules
+            
         }
     }
     render() {
         return(
             <ModuleListComponent
                 course={this.state.course}
-                modules={this.state.modules}/>
+                modules={this.state.modules}
+                params={this.props.params}
+                />
         )
     }
 }

@@ -12,14 +12,15 @@ export default class CourseEditorContainer
         super(props)
         const courseId = props.match.params.courseId;
         const moduleId = props.match.params.moduleId;
+        const lessonId = props.match.params.lessonId;
         this.courseService = CourseService.getInstance()
         this.moduleService = ModuleService.getInstance()
         this.lessonService = LessonService.getInstance()
         this.topicService =  TopicService.getInstance()
         const course = this.courseService.findCourseById(courseId)
         const modules = this.moduleService.findAllModuleForCourseById(courseId)
-        const lessons = this.lessonService.findAllLessonForModuleById(modules[0].id)
-        const topics = this.topicService.findAllTopicForLessonById(lessons[0].id)
+        const lessons = this.lessonService.findAllLessonForModuleById(moduleId)
+        const topics = this.topicService.findAllTopicForLessonById(lessonId)
         this.state = {
             course: course,
             modules: modules,
@@ -36,8 +37,8 @@ export default class CourseEditorContainer
                 course={this.state.course}
                 modules={this.state.modules}
                 lessons={this.state.lessons}
-                topics={this.state.topics}/>
-
+                topics={this.state.topics}
+                params={this.props.match.params} />
             
             </div>
         )
