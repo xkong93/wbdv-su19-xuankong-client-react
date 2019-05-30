@@ -1,6 +1,6 @@
 import React from "react";
 import './styles/CourseRow.style.client.css'
-const CourseRow = ({course}) => {
+const CourseRow = ({course,deleteRow}) => {
 
   return (
     <div className="row border justify-content-between">
@@ -9,7 +9,8 @@ const CourseRow = ({course}) => {
       <div className="d-none d-sm-block col-2 text-center">
         {course.ModifiedDate}
       </div>
-      <div className="col-2 text-right">X</div>
+      <div className="col-2 text-right"><i onClick={() => deleteRow(course.id)} className="fa fa-times" aria-hidden="true"></i>
+    </div>
     </div>
   );
 };

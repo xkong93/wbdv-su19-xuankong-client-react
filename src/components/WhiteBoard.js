@@ -10,10 +10,6 @@ class WhiteBoard extends React.Component {
       <Router>
 
         <div>
-          {/* <h1>WhiteBoard</h1> */}
-
-                    {/* <a href="/courses">Courses</a> */}
-
           <Route exact={true} path="/courses" component={CourseListContainer} />
 
           <Route

@@ -14,6 +14,7 @@ export default class CourseListContainer extends React.Component {
       toggle: false,
     };
     this.onclickChangeView = this.onclickChangeView.bind(this);
+    this.deleteRow = this.deleteRow.bind(this);
   }
 
  onclickChangeView(){
@@ -22,11 +23,18 @@ export default class CourseListContainer extends React.Component {
     })
  }
 
+      deleteRow = (id) => {
+        this.setState({
+            courses:this.state.courses.filter(course => course.id != id)
+        })
+    }
+
   render() {
     return (
       <div>
         <NavBarAndTableHead changeView={this.onclickChangeView}/>
-        {this.state.toggle ? <CourseGrid courses={this.state.courses} />: <CourseListComponent courses={this.state.courses} /> }
+        {this.state.toggle ? <CourseGrid deleteRow={this.deleteRow} courses={this.state.courses} />: <CourseListComponent deleteRow={this.deleteRow} 
+        courses={this.state.courses} /> }
       </div>
     );
   }

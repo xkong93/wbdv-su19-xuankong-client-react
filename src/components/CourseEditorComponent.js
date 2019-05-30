@@ -2,7 +2,7 @@ import React from 'react'
 import ModuleListContainer from '../containers/ModuleListContainer'
 import LessonTabsContainer from '../containers/LessonTabsContainer'
 
-const CourseEditorComponent = ({course, modules, lessons}) =>
+const CourseEditorComponent = ({course, modules, lessons,topics}) =>
 <div>
     <div className="row">
         <div className="col-3">
@@ -13,8 +13,10 @@ const CourseEditorComponent = ({course, modules, lessons}) =>
         <div className="col-9">
             <LessonTabsContainer
                 course={course}
-                lessons={lessons}/>
+                lessons={lessons}
+                topics={topics}/>
         </div>
+
     </div>
 </div>
 
