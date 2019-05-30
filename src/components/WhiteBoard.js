@@ -18,9 +18,6 @@ class WhiteBoard extends React.Component {
           />
         </div>
       
-
-
-
       </Router>
     );
   }

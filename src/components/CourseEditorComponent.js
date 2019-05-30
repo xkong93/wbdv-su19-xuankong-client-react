@@ -1,7 +1,7 @@
 import React from 'react'
 import ModuleListContainer from '../containers/ModuleListContainer'
 import LessonTabsContainer from '../containers/LessonTabsContainer'
-
+import WidigetList from '../components/WidgetList'
 const CourseEditorComponent = ({course, modules, lessons,topics}) =>
 <div>
     <div className="row">
@@ -15,6 +15,8 @@ const CourseEditorComponent = ({course, modules, lessons,topics}) =>
                 course={course}
                 lessons={lessons}
                 topics={topics}/>
+                        <WidigetList/>
+
         </div>
 
     </div>

@@ -37,6 +37,8 @@ export default class CourseEditorContainer
                 modules={this.state.modules}
                 lessons={this.state.lessons}
                 topics={this.state.topics}/>
+
+            
             </div>
         )
     }
