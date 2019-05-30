@@ -2,13 +2,15 @@ import React from 'react'
 import ModuleListContainer from '../containers/ModuleListContainer'
 import LessonTabsContainer from '../containers/LessonTabsContainer'
 import WidigetList from '../components/WidgetList'
-const CourseEditorComponent = ({course, modules, lessons,topics}) =>
+const CourseEditorComponent = ({course, modules, lessons,topics,params}) =>
 <div>
     <div className="row">
         <div className="col-3">
             <ModuleListContainer
                 course={course}
-                modules={modules}/>
+                modules={modules}
+                params={params}
+                />
         </div>
         <div className="col-9">
             <LessonTabsContainer

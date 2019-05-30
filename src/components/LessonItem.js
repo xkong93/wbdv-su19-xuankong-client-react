@@ -1,6 +1,6 @@
 import React from "react";
 
-const LessonItem = ({ lesson,deleteLesson }) => (
+const LessonItem = ({ lesson,deleteLesson,params}) => (
   <li className="nav-item">
     <a className="nav-link active" href={`/courses/123/modules/${lesson.moduleId}/lessons/${lesson.id}/topics/1`}>
       {lesson.title}

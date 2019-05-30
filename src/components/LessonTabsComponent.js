@@ -41,7 +41,7 @@ export default class LessonTabsComponent extends React.Component {
       <div>
         <ul class="nav nav-tabs">
           {this.state.lessons.map(lesson => (
-            <LessonItem lesson={lesson} deleteLesson={this.deleteLesson}/>
+            <LessonItem lesson={lesson} deleteLesson={this.deleteLesson} params={this.props.params}/>
           ))}
           <li>
               <i

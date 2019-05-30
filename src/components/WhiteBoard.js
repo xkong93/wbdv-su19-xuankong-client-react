@@ -7,9 +7,11 @@ import CourseEditorContainer from "../containers/CourseEditorContainer";
 class WhiteBoard extends React.Component {
   render() {
     return (
+        
       <Router>
 
         <div>
+          <Link to="/courses">courses</Link>
           <Route exact={true} path="/courses" component={CourseListContainer} />
 
           <Route

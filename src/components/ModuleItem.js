@@ -1,8 +1,8 @@
 import React from "react";
 
-const ModuleList = ({ module,deleteModule}) => (
-    <li className="list-group-item ">
-        <a
+const ModuleList = ({ module,deleteModule, params}) => (
+<li className={`list-group-item ${module.id == params.moduleId? 'active' : ''}`}>
+        <a  style={{"color": module.id == params.moduleId? 'white' : 'black'}}
             href={`/courses/${module.courseId}/modules/${module.id}/lessons/1/topics/1`}>
             {module.title}
         </a>

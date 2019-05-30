@@ -60,7 +60,7 @@ export default class ModuleListComponent extends React.Component {
             </button>
           </li>
           {this.state.modules.map(module => (
-            <ModuleItem deleteModule={this.deleteModule}  module={module} key={module.id} />
+            <ModuleItem  deleteModule={this.deleteModule}  module={module} key={module.id} params={this.props.params}/>
           ))}
         </ul>
       </div>
